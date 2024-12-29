@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report
 from collections import Counter
 
 # Upload data
-train_data = pd.read_csv('/content/subtask_a_train.csv')
+train_data = pd.read_csv('Milestone 2/data/trainsubtask_a_train.csv')
 
 # change the values of expected_output col to be lists of numbers of images instead of its names
 def convert_expected_order(df):
