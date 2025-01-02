@@ -1,12 +1,13 @@
+%%capture
+!wget https://raw.githubusercontent.com/musab-iskandar/Advancing-Multimodal-Idiomaticity-Representation/refs/heads/main/Milestone%202/data/train/subtask_a_train.csv
+!git clone https://github.com/musab-iskandar/Advancing-Multimodal-Idiomaticity-Representation.git
+
 # Libraries
 import numpy as np
 import pandas as pd
 import ast
 from sklearn.metrics import classification_report
 from collections import Counter
-
-# Upload data
-train_data = pd.read_csv('/content/subtask_a_train.csv')
 
 # change the values of expected_output col to be lists of numbers of images instead of its names
 def convert_expected_order(df):
@@ -24,9 +25,7 @@ def convert_expected_order(df):
     df['expected_order'] = df.apply(get_image_positions, axis=1)
     return df
 
-convert_expected_order(train_data)
-
-#Implement a simple baseline (majority baseline)
+# implement a simple baseline (majority baseline)
 def create_majority_baseline(train_df):
     # convert lists to tuples
     order_sequences = [tuple(order) for order in train_df['expected_order']]
@@ -44,11 +43,15 @@ def calculate_metrics(df, pred_sequence):
 
     return accuracy, report
 
-majority_sequence = create_majority_baseline(train_data)
+# Usage
+data_url = 'https://raw.githubusercontent.com/musab-iskandar/Advancing-Multimodal-Idiomaticity-Representation/refs/heads/main/Milestone%202/data/train/subtask_a_train.csv'
+df = pd.read_csv(data_url)
+convert_expected_order(df)
+
+majority_sequence = create_majority_baseline(df)
 print(f"Most common sequence: {majority_sequence}")
 
-accuracy, report = calculate_metrics(train_data, majority_sequence)
+accuracy, report = calculate_metrics(df, majority_sequence)
 print(f"Training accuracy: {accuracy:.2%}")
 print("Classification Report:")
 print(report)
-
