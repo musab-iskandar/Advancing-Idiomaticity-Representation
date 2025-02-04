@@ -15,17 +15,6 @@ Tab-separated file containing:
 - `image[1-5]_name`: Filenames for associated images
 - `image[1-5]_caption`: Detailed descriptions of each image
 
-### Subtask B Format (`subtask_b_train.tsv`) 
-Tab-separated file containing:
-- `compound`: Expression being analyzed
-- `subset`: Train/Sample designation  
-- `sentence_type`: "literal" or "idiomatic"
-- `expected_item`: Filename of most relevant image
-- `sequence_caption1`: Description of first image sequence
-- `sequence_caption2`: Description of second image sequence
-- `image[1-5]_name`: Filenames for associated images
-- `image[1-5]_caption`: Detailed descriptions of each image
-
 ## Key Features
 - Each entry has 5 associated images with detailed captions
 - Expressions can be used literally or idiomatically
