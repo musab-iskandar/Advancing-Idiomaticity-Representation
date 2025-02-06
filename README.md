@@ -15,6 +15,6 @@ To see the full description in SemEval: https://semeval2025-task1.github.io/
 -	F1 Score
 
 ## Students
-- Musab Iskandar - 444003841
-- Ahmad Arif - 444002984
-- Yousef Koshak  - 444000774
+- Musab Iskandar
+- Ahmad Arif
+- Yousef Koshak
