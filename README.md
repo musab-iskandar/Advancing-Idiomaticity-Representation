@@ -8,8 +8,6 @@ Specifically, our goal is to improve the quality of model representations of idi
 
    <img width="614" alt="image" src="https://github.com/user-attachments/assets/c04c425b-2d31-4246-9354-92983c83bcb4" />
 
-To see the full description in SemEval: https://semeval2025-task1.github.io/
-
 ## Evaluation metrics
 -	Accuracy
 -	F1 Score
@@ -18,3 +16,6 @@ To see the full description in SemEval: https://semeval2025-task1.github.io/
 - Musab Iskandar
 - Ahmad Arif
 - Yousef Koshak
+
+## For more
+Read this file: https://github.com/musab-iskandar/Advancing-Idiomaticity-Representation/blob/main/Advancing_Idiomaticity_Representation.pdf
